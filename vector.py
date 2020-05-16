@@ -62,7 +62,7 @@ class Vector3D:
         """
         :return: phi value for the vector in spherical or cylindrical coordinates. Given as angle between 0 and 2pi
         """
-        angles = np.arctan(self._x / self._y)
+        angles = np.arctan2(self._x / self._y)
         angles[angles < 0] = angles[angles < 0] + 2 * np.pi
         return angles
 
